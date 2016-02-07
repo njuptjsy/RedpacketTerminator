@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/description"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:packageNames="com.tencent.mm"
+    android:accessibilityFeedbackType="feedbackAllMask"
+    android:notificationTimeout="10"
+    android:accessibilityFlags="flagDefault"
+    android:canRetrieveWindowContent="true"
+    />
+<!--  android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged"
+    android:packageNames="com.tencent.mm"
+     监听的时间窗口状态变化和窗口内容标号；监听的包是腾讯的微信-->
+
