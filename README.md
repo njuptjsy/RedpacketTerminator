@@ -1,0 +1,19 @@
+# RedpacketTerminator
+利用AccessibilityService 服务实现微信红包自动抢
+
+
+实现的步骤：
+注册服务->用户允许打开辅助服务
+跟踪窗口状态
+点击红包
+展开红包
+
+AccessibilityService 服务在后台监听微信窗口变化 
+触发onAccessibilityEvent方法
+获取AccessibilityEvent对象进行操作
+窗口内容变化：微信界面出现新的消息，或者用户操作窗口
+窗口状态变化：窗口被dialog遮蔽等
+
+事件源AccessibilityNodeInfo对象
+已嵌套的形式包含的窗口快照，包含窗口中所有子AccessibilityNodeInfo对象的信息，每个子AccessibilityNodeInfo对象最终包含的是view对象的信息
+通过查找AccessibilityNodeInfo对象中的关键字符串，确定屏幕上是否有微信红包
